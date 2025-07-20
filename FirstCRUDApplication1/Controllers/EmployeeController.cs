@@ -21,5 +21,22 @@ namespace FirstCRUDApplication1.Controllers
             Repository.Create(employee);
             return View("Thanks", employee);
         }
+        public IActionResult Update(string empname)
+        {
+            Employee employee = Repository.AllEmployees.Where(e => e.Name == empname).FirstOrDefault();
+            return View(employee);
+        }
+        [HttpPost]
+        public IActionResult Update(Employee employee,string empname)
+        {
+            Repository.AllEmployees.Where(e => e.Name == empname).FirstOrDefault().Age = employee.Age;
+            Repository.AllEmployees.Where(e => e.Name == empname).FirstOrDefault().Salary = employee.Salary;
+            Repository.AllEmployees.Where(e => e.Name == empname).FirstOrDefault().Department = employee.Department;
+            Repository.AllEmployees.Where(e => e.Name == empname).FirstOrDefault().Sex = employee.Sex;
+            Repository.AllEmployees.Where(e => e.Name == empname).FirstOrDefault().Name = employee.Name;
+            return RedirectToAction("Index");
+
+
+        }
     }
 }

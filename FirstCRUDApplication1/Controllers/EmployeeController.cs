@@ -35,8 +35,13 @@ namespace FirstCRUDApplication1.Controllers
             Repository.AllEmployees.Where(e => e.Name == empname).FirstOrDefault().Sex = employee.Sex;
             Repository.AllEmployees.Where(e => e.Name == empname).FirstOrDefault().Name = employee.Name;
             return RedirectToAction("Index");
-
-
+        }
+        [HttpPost]
+        public IActionResult Delete(string empname)
+        {
+            Employee employee = Repository.AllEmployees.Where(e => e.Name == empname).FirstOrDefault();
+            Repository.Delete(employee);
+            return RedirectToAction("Index");
         }
     }
 }

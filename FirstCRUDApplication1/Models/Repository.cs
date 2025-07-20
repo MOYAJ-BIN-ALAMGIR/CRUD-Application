@@ -11,6 +11,10 @@
         {
             allEmploys.Add(employee);
         }
+        public static void Delete (Employee employee)
+        {
+            allEmploys.Remove(employee);
+        }
 
 
     }

@@ -7,7 +7,7 @@ namespace FirstCRUDApplication1.Models
         public int Age { get; set; }
         public decimal Salary { get; set; }
         public string Department { get; set; }
-        public char Sex { get; set; }
+        public Char Sex { get; set; }
     }
 
 

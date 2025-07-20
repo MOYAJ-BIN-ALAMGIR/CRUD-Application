@@ -7,7 +7,7 @@ namespace FirstCRUDApplication1.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View(Repository.AllEmployees);
         }
         //HTTP GET VERSION
         public IActionResult Create()

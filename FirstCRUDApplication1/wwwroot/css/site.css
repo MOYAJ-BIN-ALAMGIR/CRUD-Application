@@ -1,3 +1,44 @@
+.container a {
+    font-family: 'Adobe Arabic';
+    font-size: 25px;
+}
+
+form p label{
+    width: 10%;
+}
+
+form p input[type="text"], form p input [type = " number"], form p select{
+    width:20%;      
+}
+
+form p span{
+    width:20%;
+    color:red;
+}
+
+form p button, table button{
+    background-color:#006bff;
+    color:#FFF;
+}
+
+form p .input_validation_error {
+    border: 1px solid red;
+    background-color: #fee;
+}
+
+table{
+    border: solid 1px ff6a00;
+}
+
+table thead{
+    background-color: #b6ff00;
+}
+
+table th, table td {
+    padding:10px;
+}
+
+
 html {
   font-size: 14px;
 }
